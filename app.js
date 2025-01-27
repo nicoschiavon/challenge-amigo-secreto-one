@@ -13,7 +13,7 @@ function agregarAmigo() {
     }
     mostrarAmigos(amigos);
 }
-
+// Función para mostrar la lista de nombres
 function mostrarAmigos(amigos) {
     let lista = document.getElementById('listaAmigos');
     lista.innerHTML = "";
@@ -21,5 +21,16 @@ function mostrarAmigos(amigos) {
         let li = document.createElement('li');
         li.textContent = amigos[i];
         lista.appendChild(li);
+    }
+}
+// Función para sortear un nombre aleatorio
+function sortearAmigo() {
+    if (amigos.length > 0) {
+        let ganador = amigos[Math.floor(Math.random() * amigos.length)];
+        // document.getElementById('resultado').textContent = ganador;
+        elemnto = document.getElementById('resultado');
+        elemnto.innerHTML = ganador;
+    } else {
+        alert("No hay amigos en la lista.");
     }
 }
