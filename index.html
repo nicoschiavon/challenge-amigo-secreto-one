@@ -13,25 +13,29 @@
 <body>
     <main class="main-content">
         <header class="header-banner">
-            <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
+            <h1 class="main-title" >Amigo Secreto
+                Alura ONE
+            </h1>
         </header>
         
         <section class="input-section">
-            <h2 class="section-title">Digite el nombre de sus amigos</h2>
-            <div class="input-wrapper">
+            <h2 class="section-title" id="section-title">Ingrese el nombre de sus amigos</h2>
+            <div class="input-wrapper" id="input-nombre" >
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
-                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
+                <button class="button-add" onclick="agregarAmigo()" >Añadir </button>
             </div>
-           
+            <h3 class="list__title" id="titulo-lista" hidden>Nombres por sortear:</h3>
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
-                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
-                    Sortear amigo
+                <button class="button-start" id="button-start" onclick="iniciarSorteo()" style="background: none; border: none; padding: 0;">
+                    <img src="assets/sortear.png" alt="Ícono para sortear" class="button__container__sortear">
                 </button>
+                <button class="button-draw" id="button-draw" onclick="sortearAmigo()" hidden style="background: none; border: none; padding: 0;">
+                    <img src="assets/box.png" alt="caja de sorteo" class="button__container__img">
+                </button>          
+                <audio id="sonidoBoton" src="assets/coin-recieved-230517.mp3"></audio>      
             </div>
         </section>
     </main>
