@@ -8,7 +8,8 @@ function agregarAmigo() {
 
     }
     let nombre = document.getElementById('amigo').value;
-    if (nombre != "") {
+    if (nombre != "" && amigos.includes(nombre) == false) {
+        
         amigos.push(nombre);
         document.getElementById('amigo').value = "";
         document.getElementById('amigo').focus();
@@ -44,6 +45,8 @@ function sortearAmigo() {
         audio.play();
     } else {
         alert("No hay amigos en la lista.");
+        document.getElementById('input-section').style.display = 'none';
+        document.getElementById('reset-section').style.display = 'flex';
     }
 }
 
@@ -55,6 +58,22 @@ function iniciarSorteo() {
     document.getElementById('section-title').textContent = 'Sorteo de Amigos';
 }
 
+// Función para reiniciar el sorteo
+function reiniciarSorteo() {
+    document.getElementById('input-section').style.display = 'flex';
+    document.getElementById('input-nombre').style.display = 'flex';
+
+    document.getElementById('reset-section').style.display = 'none';
+    document.getElementById('button-start').removeAttribute('hidden');
+    document.getElementById('button-draw').setAttribute('hidden', true);
+    document.getElementById('section-title').textContent = 'Agregar Amigos';
+    document.getElementById('titulo-lista').setAttribute('hidden', true);
+    document.getElementById('resultado').textContent = '';
+    document.getElementById('listaAmigos').innerHTML = '';
+
+    amigos = [];
+    document.getElementById('amigo').focus();
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const inputAmigo = document.getElementById('amigo');

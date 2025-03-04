@@ -98,6 +98,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    align-items: center;
 }
 
 .button__container__img {
@@ -105,6 +106,19 @@ body {
 }
 
 .button__container__sortear {
+    width: 90%;
+}
+
+.reset-section {
+
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.button__container__reset {
     width: 90%;
 }
 

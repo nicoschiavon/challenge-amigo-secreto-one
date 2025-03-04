@@ -18,7 +18,7 @@
             </h1>
         </header>
         
-        <section class="input-section">
+        <section class="input-section" id="input-section">
             <h2 class="section-title" id="section-title">Ingrese el nombre de sus amigos</h2>
             <div class="input-wrapper" id="input-nombre" >
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
@@ -36,7 +36,17 @@
                     <img src="assets/box.png" alt="caja de sorteo" class="button__container__img">
                 </button>          
                 <audio id="sonidoBoton" src="assets/coin-recieved-230517.mp3"></audio>      
+
             </div>
+        </section>
+        <section class="reset-section" id="reset-section" style="display: none;">
+            <div class="button-container">
+
+                <button class="button-reset" id="button-reset" onclick="reiniciarSorteo()" style="background: none; border: none; padding: 0;">
+                    <img src="assets/reset.png" alt="boton reiniciar" class="button__container__reset">
+                </button>
+            </div>
+            
         </section>
     </main>
 
